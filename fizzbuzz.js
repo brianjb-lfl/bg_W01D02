@@ -2,17 +2,21 @@
 function fizzbuzz(countTo){
   let fizzBuzzArr = [];
   for (let i = 1; i <= countTo; i++){
-    switch(true){
-      case (i % 15) === 0:
-      fizzBuzzArr.push("fizzbuzz");
+    switch(i%15){
+      case 0:
+        fizzBuzzArr.push("fizzbuzz");
         break;
-        case (i % 3) === 0:
-          fizzBuzzArr.push("fizz");
+      case (3):
+      case (6):
+      case (9):
+      case (12):
+        fizzBuzzArr.push("fizz");
         break;
-        case (i % 5) === 0:
-          fizzBuzzArr.push("buzz");
+      case 5:
+      case 10:
+        fizzBuzzArr.push("buzz");
         break;
-        default:
+      default:
         fizzBuzzArr.push(i);
     }
   }
